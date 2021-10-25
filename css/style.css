@@ -1,0 +1,293 @@
+/* reset */
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 1rem;
+  font-family: 'Open Sans Condensed', sans-serif;;
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+ul{
+  list-style: none;
+}
+
+/* classes gerais */
+.container{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 639px) {
+  .container {
+    max-width: 300px;
+  }
+}
+
+/* cabeçalho */
+.cabecalho{
+  background: #000;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0px;
+  padding: 20px 0;
+}
+
+.cabecalho img{
+  max-width: 36px;
+}
+
+.container-cabeçalho{
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-lista{
+  gap: 20px;
+}
+
+@media (max-width: 639px) {
+  .cabecalho {
+    position: relative;
+    padding: 10px 0;
+  }
+
+  .cabecalho img{
+    max-width: 30px;
+  }
+}
+
+/* main */
+.main{
+  color: #fff;
+  text-align: center;
+  padding: 120px;
+  background-image: url('/img/fundo/pexels-cottonbro-5530252.jpg');
+  background-position: center end;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main h1{
+  font-size: 3rem;
+  text-transform: uppercase;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+.main h1::after{
+  content: '';
+  display: block;
+  margin: 3px auto;
+  background: #fff;
+  width: 120px;
+  height: 2px;
+}
+
+.main p{
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+@media (max-width: 639px) {
+  .main {
+    padding: 60px;
+  }
+
+  .main h1 {
+    font-size: 2.6rem;
+  }
+}
+
+/* portfolio */
+.portfolio{
+  padding: 20px 0;
+  background: #252525;
+}
+
+.container-portfolio{
+  gap: 20px;
+}
+
+.item-portfolio{
+  flex: 1;
+}
+
+@media (max-width: 639px) {
+  .container-portfolio.flex-container {
+    flex-direction: column;
+  }
+}
+
+/* info */
+.info {
+  background: #000;
+  padding: 20px 0px;
+  color: #fff;
+}
+
+.info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+} 
+
+.info-content h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.info-content h1::after{
+  content: '';
+  display: block;
+  margin: 3px auto;
+  background: #fff;
+  width: 120px;
+  height: 2px;
+}
+
+.info-itens h3{
+  color: #FFD638;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+.info-itens h3::after{
+  content: '';
+  display: block;
+  background-color: #FFD638;
+  width: 120px;
+  height: 2px;
+  margin: 2px auto 8px auto;
+}
+
+.info-itens p{
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.corona img{
+  width: 400px;
+  padding: 20px;
+}
+
+@media (max-width: 639px) {
+  .info-content {
+    flex-direction: column;
+  }
+}
+
+
+/* contato */
+
+.contato {
+  color: #fff;
+  background: #252525;
+  padding: 20px 0;
+}
+
+.contato h1{
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.contato h1::after{
+  content: '';
+  display: block;
+  margin: 3px auto;
+  background: #fff;
+  width: 90px;
+  height: 2px;
+}
+
+.contato-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.contato-content h3{
+  color: #FFD638;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  border-bottom: 2px solid;
+}
+
+.contato-itens {
+  align-self: flex-start;
+}
+
+.contato-itens p{
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.contato-itens p a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.contato-itens p a:hover{
+  color: #57BB66;
+}
+
+@media (max-width: 639px) {
+  .contato-content {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .contato-content h3 {
+    border-bottom: none;
+  }
+
+  .contato-content h3::after {
+    content: '';
+    display: block;
+    margin: 0 auto 5px auto;
+    width: 30px;
+    height: 2px;
+    background-color: #FFD638;
+  }
+}
+
+/* footer */
+.footer{
+  color: #fff;
+  font-style: italic;
+  text-align: center;
+  background: #000;
+  padding: 40px;
+}
+
+
+
+
+
+
